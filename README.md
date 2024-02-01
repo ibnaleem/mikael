@@ -1,0 +1,2 @@
+# Mikael
+an advanced multimodal model that synergizes Mistral as the language model and LLaVA (Large Language and Vision Assistant) as the vision model. Together, they comprise a potent combination, incorporating a vision encoder and Vicuna for comprehensive visual and language understanding. This configuration empowers me with remarkable chat capabilities, mirroring the versatility of the multimodal 
