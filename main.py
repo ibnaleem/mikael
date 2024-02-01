@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord import Intents
 from discord.ui import Button, View
 
-MIKAEL_TOKEN = os.environ["MISTRAL_TOKEN"]
+MIKAEL_TOKEN = os.environ["MIKAEL_TOKEN"]
 
 intents = Intents.all()
 chat_log = []
