@@ -22,4 +22,14 @@ Currently, Mistral's 7.3B parameter LLM can:
 
 ## Privacy
 - Mikael ***temporarily*** downloads all images it's sent to be fed into LLaVA's multimodal model; after successfully finishing its task, your images are immediately deleted from the server.
-- Mikael does not store your chats
+- Mikael only stores your chats in random access memory (RAM).
+
+## Acknowledgements
+- [LLaVA](https://llava-vl.github.io)
+- [Mistral AI](https://mistral.ai)
+- [ollama/ollama-python](https://github.com/ollama/ollama-python)
+
+## Support Server
+```
+https://discord.gg/JX4XgrQSeV
+```
