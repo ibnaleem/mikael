@@ -34,18 +34,40 @@ async def on_message(message):
     else:
         if isinstance(message.channel, discord.DMChannel):
             await message.channel.typing()
-            num = 1
-            while num != 0:
-                chat_log.append({"role": "user", "content": message.content})
 
-                chat_call = ollama.chat(model="mistral", messages=chat_log)
-                response = chat_call["message"]["content"]
-                chat_log.append({"role": "assistant", "content": response})
+            if message.attachments:  
+                for attachment in message.attachments:
+                    if os.path.splitext(attachment.filename)[1] in [
+                        ".png",
+                        ".jpg",
+                        ".jpeg",
+                        ".gif",
+                    ]:
+                        await message.channel.typing()
+                        await attachment.save(attachment.filename)
+    
+                        response = ollama.generate(
+                            model="llava",
+                            prompt=message.content,
+                            images=[attachment.filename],
+                            stream=False
+                        )
+    
+                        await message.channel.send(response['response'])
+                        os.remove(attachment.filename)
 
-                await message.channel.send(response)
-                num -= 1
-                if num == 0:
-                    break
+           else:
+               num = 1
+               while num != 0:
+                   chat_log.append({"role": "user", "content": message.content})
+                   chat_call = ollama.chat(model="mistral", messages=chat_log)
+                   response = chat_call["message"]["content"]
+                   chat_log.append({"role": "assistant", "content": response})
+                   
+                   await message.channel.send(response)
+                   num -= 1
+                   if num == 0:
+                       break
 
     await client.process_commands(message)
 
