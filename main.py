@@ -91,4 +91,4 @@ async def on_guild_join(guild):
     except discord.Forbidden:
         pass
 
-client.run(MISTRAL_TOKEN)
+client.run(MIKAEL_TOKEN)
