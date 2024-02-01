@@ -21,8 +21,8 @@ Currently, Mistral's 7.3B parameter LLM can:
 - Incorporate [Dolphin-Mixtral-8x7b](https://huggingface.co/cognitivecomputations/dolphin-2.5-mixtral-8x7b) as Mikael's main LLM.
 
 ## Privacy
-- Mikael ***temporarily*** downloads all images it's sent to be fed into LLaVA's multimodal model; after successfully finishing its task, your images are immediately deleted from the server.
-- Mikael only stores your chats in random access memory (RAM).
+- Mikael ***temporarily*** downloads all images it's sent to be fed into LLaVA's multimodal model; after successfully finishing its task, your images are immediately deleted from the server. ([L39-L59](https://github.com/ibnaleem/mikael/blob/main/main.py#L39C13-L59C1))
+- Mikael only stores your chats in random access memory (RAM) ([L63-L66](https://github.com/ibnaleem/mikael/blob/main/main.py#L63-L66)).
 
 ## Acknowledgements
 - [LLaVA](https://llava-vl.github.io)
