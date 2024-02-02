@@ -17,6 +17,40 @@ Currently, Mistral's 7.3B parameter LLM can:
 - Use Sliding Window Attention (SWA) to handle longer sequences at smaller cost
 
 ([Mistral AI, 2024](https://mistral.ai/news/announcing-mistral-7b/))
+## Running locally
+Mikael can be self-hosted by following these steps:
+### Install Ollama
+For Linux:
+```
+curl https://ollama.ai/install.sh | sh
+```
+For MacOS:
+```
+https://ollama.ai/download/Ollama-darwin.zip
+```
+### Run the following terminal commands:
+1. ```
+   ollama pull mistral
+   ```
+2. ```
+   ollama pull llava
+   ```
+Mistral needs 4.7 GB, while llava requires 4.1 GB of space.
+### Install Requirements
+```
+pip install discord.py ollama
+```
+### Set Mikael's Token
+```
+nvim /path/to/bash-or-zsh
+```
+```
+export MIKAEL_TOKEN="TOKEN HERE"
+```
+```
+source /path/to/bash-or-zsh
+```
+Mikael should run correctly; [open an issue](https://github.com/ibnaleem/mikael/issues) if it does not.
 ## Future Plans
 - Incorporate [Dolphin-Mixtral-8x7b](https://huggingface.co/cognitivecomputations/dolphin-2.5-mixtral-8x7b) as Mikael's main LLM.
 
