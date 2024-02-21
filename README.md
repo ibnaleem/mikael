@@ -1,6 +1,10 @@
 # Mikael
 An advanced multimodal model hosted as a Discord bot that synergizes [Mistral](https://mistral.ai) as the language model and [LLaVA (Large Language and Vision Assistant)](https://llava-vl.github.io) as the vision model. Together, they comprise a potent combination, incorporating a vision encoder and Vicuna for comprehensive visual and language understanding. This configuration empowers Mikael with remarkable chat capabilities, mirroring the versatility of the multimodal GPT-4. 
 
+<div align="center">
+   <img src="https://github.com/ibnaleem/mikael/blob/main/assets/showcase.gif?raw=true", alt="Showcase of Mikael Discord Bot">
+</div>
+
 ## Invite Mikael
 Mikael does not require any permissions, it is a **chat-only** Discord bot:
 ```
